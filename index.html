@@ -1,46 +1,236 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Korbo Chainz</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Korbo Chainz Music</title>
 
 <style>
 
-body{
-    background:#121212;
-    color:white;
-    font-family:Arial;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
 
-.song{
-    background:#181818;
-    padding:20px;
-    margin:10px;
-    border-radius:10px;
+body{
+background:#121212;
+color:white;
+display:flex;
+min-height:100vh;
+}
+
+.sidebar{
+width:220px;
+background:#000;
+padding:20px;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+margin-bottom:30px;
+color:#1DB954;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar li{
+padding:12px 0;
+color:#ccc;
+cursor:pointer;
+}
+
+.sidebar li:hover{
+color:white;
+}
+
+.main{
+flex:1;
+padding:30px;
+}
+
+.hero{
+margin-bottom:30px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#aaa;
+}
+
+.section-title{
+margin:20px 0;
+font-size:24px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#181818;
+padding:15px;
+border-radius:12px;
+transition:.3s;
+}
+
+.card:hover{
+background:#222;
+transform:translateY(-3px);
+}
+
+.cover{
+width:100%;
+height:200px;
+background:#333;
+border-radius:10px;
+margin-bottom:15px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:50px;
+}
+
+.song-title{
+font-size:20px;
+margin-bottom:5px;
+}
+
+.song-desc{
+color:#aaa;
+font-size:14px;
+margin-bottom:15px;
+}
+
+audio{
+width:100%;
+}
+
+.stats{
+margin-top:40px;
+background:#181818;
+padding:20px;
+border-radius:12px;
+}
+
+.stats h2{
+margin-bottom:15px;
+}
+
+.stat{
+margin:8px 0;
+}
+
+footer{
+margin-top:40px;
+color:#777;
+font-size:14px;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<h1>🎵 Korbo Chainz</h1>
+<div class="sidebar">
 
-<div class="song">
-<h2>My Name's Korbo Chainz</h2>
+<div class="logo">KC</div>
+
+<ul>
+<li>🏠 Home</li>
+<li>🎵 Songs</li>
+<li>💿 Albums</li>
+<li>🔥 Trending</li>
+<li>📈 Stats</li>
+</ul>
+
+</div>
+
+<div class="main">
+
+<div class="hero">
+<h1>Korbo Chainz</h1>
+<p>Independent artist • Streaming original music</p>
+</div>
+
+<h2 class="section-title">Featured Tracks</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="cover">🎤</div>
+
+<div class="song-title">My Name's Korbo Chainz</div>
+
+<div class="song-desc">
+The song that started it all.
+</div>
 
 <audio controls>
-<source src="mynameskorbochainz.mp3">
+<source src="mynameskorbochainz.mp3" type="audio/mpeg">
 </audio>
 
 </div>
 
-<div class="song">
-<h2>Trending</h2>
+<div class="card">
+
+<div class="cover">📈</div>
+
+<div class="song-title">Trending</div>
+
+<div class="song-desc">
+The breakout track from the Trending era.
+</div>
 
 <audio controls>
-<source src="trending.mp3">
+<source src="trending.mp3" type="audio/mpeg">
 </audio>
+
+</div>
+
+<div class="card">
+
+<div class="cover">🏀</div>
+
+<div class="song-title">Fourth Quarter</div>
+
+<div class="song-desc">
+Clutch-time anthem.
+</div>
+
+<audio controls>
+<source src="fourthquarter.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+</div>
+
+<div class="stats">
+
+<h2>Korbo Chainz Stats</h2>
+
+<div class="stat">🎧 Total Streams: 1,000+</div>
+<div class="stat">🔥 Most Streamed: My Name's Korbo Chainz</div>
+<div class="stat">💿 Featured Project: Trending</div>
+
+</div>
+
+<footer>
+© 2026 Korbo Chainz
+</footer>
 
 </div>
 
